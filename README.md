@@ -1,6 +1,6 @@
 # AWS Pipeline Bucket module
 
-This module will create an S3 bucket that can be used by an AWS Codepipeline to store artifacts. The bucket is 
+This module will create an S3 bucket that can be used by an AWS CodePipeline pipeline to store artifacts. The bucket is
 configured with:
  * encryption at rest using a KMS key also created by this module.
  * objects versioning enabled.
@@ -23,7 +23,7 @@ module "artifacts" {
   source  = "PGBI/pipeline-bucket/aws"
   version = "~>0.1.0"
 
-  name        = "artifacts"
-  project     = module.project
+  name    = "artifacts"
+  project = module.project
 }
 ```
