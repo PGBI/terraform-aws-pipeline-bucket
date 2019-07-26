@@ -1,17 +1,11 @@
-# AWS Simple Private Bucket module
+/**
+ * Configure the AWS Provider
+ */
+provider "aws" {
+  version = "~> 2.0"
+  region  = "us-east-1"
+}
 
-This module will create a private S3 bucket. The bucket is configured with:
- * encryption at rest using AWS:KMS encryption with the default AWS managed S3 master key.
- * objects versioning enabled.
-
-A bucket created with this module can be used:
- * as an artifacts store for a Codebuild project or a CodePipeline pipeline,
- * to store the code package of a lambda function,
- * ...
-
-## Usage
-
-```hcl
 /**
  * Initialize the project
  */
@@ -33,4 +27,3 @@ module "artifacts" {
   name    = "artifacts"
   project = module.project
 }
-```
