@@ -2,7 +2,7 @@
 
 This module will create an S3 bucket that can be used by an AWS CodePipeline pipeline to store artifacts. The bucket is
 configured with:
- * encryption at rest using a KMS key also created by this module.
+ * encryption at rest using AWS:KMS encryption with the default AWS managed S3 master key.
  * objects versioning enabled.
 
 Usage:
