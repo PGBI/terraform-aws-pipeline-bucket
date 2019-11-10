@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 0.12.6"
 }
 
 /**
@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "main" {
     }
   }
   versioning {
-    enabled = true
+    enabled = var.enable_versioning
   }
   tags = var.project.tags
 }

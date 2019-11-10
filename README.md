@@ -2,7 +2,7 @@
 
 This module will create a private S3 bucket. The bucket is configured with:
  * encryption at rest using AWS:KMS encryption with the default AWS managed S3 master key.
- * objects versioning enabled.
+ * objects versioning enabled by default.
 
 A bucket created with this module can be used:
  * as an artifacts store for a Codebuild project or a CodePipeline pipeline,
@@ -17,7 +17,7 @@ A bucket created with this module can be used:
  */
 module "project" {
   source  = "PGBI/project/aws"
-  version = "~>0.1.0"
+  version = "~>0.2.0"
 
   name     = "myproject"
   vcs_repo = "github.com/account/project"

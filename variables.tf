@@ -12,3 +12,8 @@ variable "kms_master_key_arn" {
   description = "ARN of the custom managed AWS KMS master key. If left empty, the default `aws/s3` AWS managed master key will be used instead."
   default     = null
 }
+
+variable "enable_versioning" {
+  description = "Whether or not object versioning should be enabled."
+  default     = true
+}
